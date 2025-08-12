@@ -1,0 +1,11 @@
+name: Hello World Runner Test
+
+on:
+  workflow_dispatch: # można uruchomić ręcznie z GitHub UI
+
+jobs:
+  hello:
+    runs-on: [self-hosted, docker] # etykiety z twojego runnera
+    steps:
+      - name: Say Hello
+        run: echo "Hello World from GitHub Runner!"
